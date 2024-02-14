@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #FFE600;
+}
+
+.search-input {
+  display: flex;
+}
+
+.search-input>input {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  width: 50vw;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.ml-logo {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ml-logo-search {
+  background-color: #EEEEEE;
+  padding: 10px;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+}

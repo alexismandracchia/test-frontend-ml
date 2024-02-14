@@ -1,0 +1,31 @@
+.card {
+  padding: 16px;
+  display: flex;
+  width: 100%;
+}
+
+.card .container_image {
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+.container_detail {
+  margin-left: 16px;
+}
+
+.container_detail .price {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.shipping-logo {
+  margin-top: 3px;
+  margin-left: 8px;
+}
+
+.container_detail .title {
+  font-size: 18px;
+}
