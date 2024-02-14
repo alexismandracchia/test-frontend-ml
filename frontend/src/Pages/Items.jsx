@@ -4,13 +4,15 @@ import Productos from '../Components/Productos';
 
 const Home = ({search}) => {
   
-  const [items, setItems] = useState([])
-  const [isLoading,setIsloading] = useState(true)
+  const [items, setItems] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [isLoading,setIsloading] = useState(true);
 
   const result = async () => {
     try{
       const responseData = await getAllProductos(search);
       setItems(responseData.data.items);
+      setCategories(responseData.data.categories);
       setIsloading(false);
     }catch(e){
       console.log(e);
@@ -33,7 +35,7 @@ const Home = ({search}) => {
     return(
       <>
         <div>
-          <Productos items={items} />
+          <Productos items={items} categories={categories} />
         </div>
       </>
     )

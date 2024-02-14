@@ -28,7 +28,7 @@ const Detalle = ({ producto }) => {
               {producto.title}
             </div>
             <div className='detail_price'>
-              $ {producto.price.amount.toLocaleString('es-AR')} <span className='decimal'>00</span>
+              $ {producto.price.amount.toLocaleString('es-AR')} <span className='decimal'>{producto.price.decimals}</span>
             </div>
             <button className='detail_button'>Comprar</button>
           </div>

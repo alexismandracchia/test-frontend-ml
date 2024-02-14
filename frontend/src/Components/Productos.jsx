@@ -2,12 +2,15 @@
 import Producto from "./Producto"
 import './Productos.css'
 
-const Items = ({items}) => {
+const Items = ({items, categories}) => {
   
   return (
     <div className="container_base">
+      <div className="breadcrumb">
+        <span>{categories.join(' > ')}</span>
+      </div>
       <div className="results">
-        {items.slice(0, 4).map(item => <Producto {...item} /> )}
+        {items.map(item => <Producto {...item} /> )}
       </div>
     </div>
   )

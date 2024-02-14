@@ -25,7 +25,7 @@ app.get('/api/items', async (peticion, res) => {
         free_shipping: item.shipping.free_shipping
       })
     });
-    res.json({ items: items });
+    res.json({ categories: ['Electronica, Audio y Video', 'iPod', 'Reproductores', 'iPod touch', '32 GB'], items: items });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al obtener los datos');
@@ -44,9 +44,11 @@ app.get('/api/items/:id', async (peticion, res) => {
       price: {
         currency: result.data.currency_id,
         amount: result.data.price,
+        decimals: '00'
       },
       picture: result.data.pictures[0].url,
       condition: result.data.condition,
+      sold_quantity: 234,
       free_shipping: result.data.shipping.free_shipping,
     };
     const description = await axios.get(`https://api.mercadolibre.com/items/${id}/description`);

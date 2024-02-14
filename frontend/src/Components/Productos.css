@@ -1,9 +1,15 @@
 .container_base {
   background-color: #EEEEEE;
-  padding: 20px 10vw;
+  padding: 16px 10vw;
 }
 
 .container_base .results {
   background-color: white;
   border-radius: 4px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #666666;
 }

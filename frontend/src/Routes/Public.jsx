@@ -5,15 +5,15 @@ import Home from '../Pages/Home';
 import Detalle from "../Pages/Detalle";
 import Items from "../Pages/Items";
 
-function Public({search}){
-    return(
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/items' element={<Items search={search} />} />
-          <Route path='/producto/:id' element={<Detalle />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-    )
+const Public = ({search}) => {
+  return(
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/items' element={<Items search={search} />} />
+      <Route path='/producto/:id' element={<Detalle />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
+  )
 }
 
-export default Public
+export default Public;
